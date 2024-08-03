@@ -1,7 +1,8 @@
-name: Windows - PikPak Create Account
+name: Windows - PikPak Create Account every 3 days
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 0 */3 * *"
 
 jobs:
   build:
