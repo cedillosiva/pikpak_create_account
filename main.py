@@ -77,12 +77,12 @@ driver.find_element(By.XPATH, "(//button[@class='el-button el-button--primary bu
 driver.find_element(By.XPATH, "//textarea").send_keys(magnet)
 els = driver.find_elements(By.XPATH, "//button[@class='el-button el-button--primary']")
 els[-1].click()
-time.sleep(1)
 print(email, code)
 with open('data.json', 'w') as f:
     json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
 host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
 requests.get(f"{host}/update/{email}")
+wait_for_element(driver, "//*[@class=\"el-dialog__body\"]/div[@class='button']")
 driver.find_element(By.XPATH, "//*[@class=\"el-dialog__body\"]/div[@class='button']").click()
 driver.find_element(By.XPATH, "(//button[@class='el-button el-button--primary button'])[1]").click()
 driver.switch_to.window(driver.window_handles[-1])
