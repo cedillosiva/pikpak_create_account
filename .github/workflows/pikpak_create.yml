@@ -30,7 +30,10 @@ jobs:
           
       - name: execute py script # run main.py
         run: python main.py
-          
+        
+      - name: Time Counter
+        run: python time.py
+        
       - name: commit files
         run: |
           git config --local user.email "piyushpradhan22@gmail.com"
