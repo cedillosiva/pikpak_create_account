@@ -8,7 +8,7 @@ import json
 import pyautogui
 import os
 
-def wait_for_element(driver, xpath, waitS = 300):
+def wait_for_element(driver, xpath, waitS = 1000):
     for i in range(waitS):
         if len(driver.find_elements(By.XPATH, xpath)) > 0:
             break
@@ -80,4 +80,4 @@ time.sleep(1)
 print(email, code)
 with open('data.json', 'w') as f:
     json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
-time.sleep(100000)
+driver.quit()
