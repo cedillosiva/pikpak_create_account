@@ -6,6 +6,7 @@ import time
 from GmailBox import GmailBox
 import json
 import pyautogui
+import os
 
 def wait_for_element(driver, xpath, waitS = 10):
     for i in range(waitS):
@@ -21,7 +22,7 @@ password = 'Test@1234'
 magnet = 'magnet:?xt=urn:btih:3928fc19fef800d3b164eabbfe3ef9aac4432c5b'
 
 options = ChromeOptions()
-options.add_argument(r"--load-extension=E:\\Wspace\\pikpak\\captcha_solver")
+options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
 driver = webdriver.Chrome(options=options)
 driver.maximize_window()
 
