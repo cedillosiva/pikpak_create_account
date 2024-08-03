@@ -1,13 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver import Chrome, ChromeOptions, EdgeOptions, FirefoxOptions
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver import ChromeOptions
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 import time
 from GmailBox import GmailBox
 import json
-from selenium.webdriver.common.keys import Keys
 import pyautogui
 
 def wait_for_element(driver, xpath, waitS = 10):
@@ -19,7 +16,6 @@ def wait_for_element(driver, xpath, waitS = 10):
 Gmail = GmailBox()
 New_Gmail = Gmail.new_email()
 email = New_Gmail.email
-print(email)
 
 password = 'Test@1234'
 magnet = 'magnet:?xt=urn:btih:3928fc19fef800d3b164eabbfe3ef9aac4432c5b'
@@ -58,7 +54,6 @@ inbox = Gmail.inbox(email)
 if inbox:
     for message in inbox:
         code = str(message).split("verification Code：")[2][:6]
-        print(code)
 # If no messages were received, print a message
 else:
     print(f' [!] No messages were received.')
@@ -82,4 +77,7 @@ driver.find_element(By.XPATH, "//textarea").send_keys(magnet)
 els = driver.find_elements(By.XPATH, "//button[@class='el-button el-button--primary']")
 els[-1].click()
 time.sleep(1)
+print(email, code)
+with open('data.json', 'w') as f:
+    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
 driver.quit()
