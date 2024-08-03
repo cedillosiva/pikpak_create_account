@@ -1,0 +1,150 @@
+POST https://user.mypikpak.com/v1/shield/captcha/init HTTP/2
+host: user.mypikpak.com
+content-length: 830
+accept: */*
+accept-encoding: gzip, deflate, br
+referer: https://pc.mypikpak.com
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+user-agent: MainWindow Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) PikPak/2.5.4.4801 Chrome/100.0.4896.160 Electron/18.3.15 Safari/537.36
+accept-language: en-US
+content-type: application/json
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+x-client-id: YvtoWO6GNHiuCl7x
+x-client-version: 2.5.4.4801
+x-device-id: 5558556d5693464ca0b88de86f6d51b9
+x-device-model: electron%2F18.3.15
+x-device-name: PC-Electron
+x-device-sign: wdi10.5558556d5693464ca0b88de86f6d51b9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x-net-work-type: NONE
+x-os-version: Win32
+x-platform-version: 1
+x-protocol-version: 301
+x-provider-name: NONE
+x-sdk-version: 8.0.2
+
+{"client_id":"YvtoWO6GNHiuCl7x","action":"POST:/v1/auth/signin","device_id":"5558556d5693464ca0b88de86f6d51b9","captcha_token":"","meta":{"email":"fapawa2615@almaxen.com"}}
+
+###
+
+POST https://user.mypikpak.com/v1/auth/signin HTTP/2
+host: user.mypikpak.com
+content-length: 91
+accept: */*
+accept-encoding: gzip, deflate, br
+referer: https://pc.mypikpak.com
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+user-agent: MainWindow Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) PikPak/2.5.4.4801 Chrome/100.0.4896.160 Electron/18.3.15 Safari/537.36
+accept-language: en-US
+content-type: application/json
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+x-captcha-token: ck0.vBdjB-qIfZOOpmfWiJQwTk_WbT0PWAnEAuWBOOprymZuQ41td11eOVaCVOA9RJyUY7Bj4Pt4kyRO0zCb3ESpB4qQpdqtFEdHdqOGXxIlM_OF5fOxDSrH4bu-joTZP3-7O3kbDA-SmL7KSDk8NiSQZ689obh-6szYJbbvrc__M7DhbvNuCBrDcBdecHLWR4rbduiJiGI_P7oom9Dpf4SDMJGlO-mG27cuGwNN1fjr25szaeR1K-cZA-vlScPd5UC_DOOglVYDNjqb28cDHgIETuXKsQi_NRU-_fKtw-5_MyW6keOPbdiWW8btqDEEuNntN_4x_WdL4-P9sx2cmlTleBe0lhFUdIXc0HjcdOFkNJA
+x-client-id: YvtoWO6GNHiuCl7x
+x-client-version: 2.5.4.4801
+x-device-id: 5558556d5693464ca0b88de86f6d51b9
+x-device-model: electron%2F18.3.15
+x-device-name: PC-Electron
+x-device-sign: wdi10.5558556d5693464ca0b88de86f6d51b9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x-net-work-type: NONE
+x-os-version: Win32
+x-platform-version: 1
+x-protocol-version: 301
+x-provider-name: NONE
+x-sdk-version: 8.0.2
+
+{"username":"fapawa2615@almaxen.com","password":"Test@1234","client_id":"YvtoWO6GNHiuCl7x"}
+
+###
+
+POST https://user.mypikpak.com/v1/shield/captcha/init HTTP/2
+host: user.mypikpak.com
+content-length: 965
+accept: */*
+accept-encoding: gzip, deflate, br
+referer: https://pc.mypikpak.com
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+user-agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) PikPak/2.5.4.4801 Chrome/100.0.4896.160 Electron/18.3.15 Safari/537.36
+accept-language: en
+content-type: application/json
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+x-client-id: YvtoWO6GNHiuCl7x
+x-client-version: 2.5.4.4801
+x-device-id: 5558556d5693464ca0b88de86f6d51b9
+x-device-model: electron%2F18.3.15
+x-device-name: PC-Electron
+x-device-sign: wdi10.5558556d5693464ca0b88de86f6d51b9xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x-net-work-type: NONE
+x-os-version: Win32
+x-platform-version: 1
+x-protocol-version: 301
+x-provider-name: NONE
+x-sdk-version: 8.0.2
+
+{"client_id":"YvtoWO6GNHiuCl7x","action":"GET:/vip/v1/vip/info","device_id":"5558556d5693464ca0b88de86f6d51b9","captcha_token":"ck0.Lbi07olWDuddu3WDjIC-aGghZMpXyaLBgplabW8CTodIMsUvbot9oiAz3RuHXfFVY3i7pQlsJacxyoCx-rYuuXLScMSUTU0B-iPYy80UVLan2XQms397Y_c7UB4lm1bBFHiG9f946Yg9DxuiqRx8VXcngBB1BYXwPlLwzdUScap8K_qvbkHobLo4tsbdtfR6uDr6nIEZ5DgQfZz2OjwHfbc5BDaWtRr1fYZUuNAJzjF_MtXcqz7Ygb46W1670JhqAsUE4Q4EzQrLdesNHeLEedE1gFsgidHgHs-bldz6XkmlvLQzvamzAIT8IM8Hor5xXiUsIF6hlZ43ohYbe41KW2CHZoTaSpe495P6DhjOk4E.ClQImsuipJEyEhBZdnRvV082R05IaXVDbDd4Ggl1bmRlZmluZWQiDG15cGlrcGFrLmNvbSogMThlODVlMWQ1NjkzNDY0Y2EwYjg4ZGU4NmY2ZDUxYjkSgAGhMayAvh1yd34Eyy8bi9MJlACaspJvJydCao5u7ge8GEUJi5ZL0RrYC0qV-qWssyOWst-SgJ4ij47Kfs9oOO_ajcQ9ecUUqnPynTu8iIikg23fklmJMsrtv9xLjQ29YY9URM4YxyPkuoHWf81Nv0pPeUM7V3mDJnvXJgQ9Xb4dfw","meta":{"captcha_sign":"1.2449e0df530ac61411dc9227e07734ae","client_version":"undefined","package_name":"mypikpak.com","user_id":"ZqMiY1p4Tw2VXMAH","timestamp":"1721357140495"}}
+
+###
+
+POST https://api-drive.mypikpak.com/vip/v1/activity/invite HTTP/2
+host: api-drive.mypikpak.com
+content-length: 32
+accept: */*
+accept-encoding: gzip, deflate, br
+accept-language: en-US
+authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk2MTVkZGU5LTI5N2YtNDM1ZC05MDQzLTM5NzhiNTdiYmEwNyJ9.eyJpc3MiOiJodHRwczovL3VzZXIubXlwaWtwYWsuY29tIiwic3ViIjoiWnFNaVkxcDRUdzJWWE1BSCIsImF1ZCI6Ill2dG9XTzZHTkhpdUNsN3giLCJleHAiOjE3MjI2MzM1ODIsImlhdCI6MTcyMjYyNjM4MiwiYXRfaGFzaCI6InIuSzcyb3dWRUVFZS1KQmo1bWNuenVvQSIsInNjb3BlIjoicGFuIHVzZXIgc3luYyBvZmZsaW5lIiwicHJvamVjdF9pZCI6IjJ3a3M1NmMzMWRjODBzeG01cDkiLCJtZXRhIjp7ImEiOiIwNXN2b3dRU0Y0M3AzU08yeTAwYWVhSUdWaXl4K0kvTXdxcVlCVk1KQ2NFPSJ9fQ.b9xsXiSIizq_m3Ld5hKe3jz80dpYu5rSPRH6NFgjQ3H2-5xvIZ_lDYy6WrRve32QUlC0t--1YMn5A9gMRK8L38RJWSccs5owWcFPjXYHV1T6CTDsdZlEZFZ1k4DOUBWcPci0WEwEIgmJ5zZE9jigpuEq0W1NiV2cNDdvaZdfcHTGt4eN_xSDNSljU1HYpTBc_ZPAf7Fo4ymK4_kXFk5vTG1SamHaxUrUBnoQzGvALvEuBZF_7dZf3ZqKztqZ0G_k1EaDc_uG1ntP9Oc8GYo5wT0D4YanznTbSwkuEkTkUC-UQA_ae2UK_uF4gmhEeWWlLtPzMY9FAeus1vWahGAcxA
+referer: https://pc.mypikpak.com
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+user-agent: MainWindow Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) PikPak/2.5.4.4801 Chrome/100.0.4896.160 Electron/18.3.15 Safari/537.36
+content-type: application/json
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+x-captcha-token: ck0.QsRedoF3tMveD5oXUcPPFjCJvXeUXtan15X-aKtsFagwNJPgc8ojDy61EolSheioj2aJk_hU0R5m3U2gBIipsL_vS26P2c9OMJJJZqZepRNGzCCF_bUQpduS63k3JtsCgDv5xDfyt390tV4QX9-2MxgHMWE9jtvpBPor4lMFSY6Nb060eoHZ-UkGhICkoUxH7tCWZMxDf-tXWfvtnuGFYATJqj94-zwVxDiuIJXUKwzkcO_T9Yxid8CBz3wM_f2dO1_4phbnmhIlMWdKdPUqE14fBFKo52-UmJwWx8xbjBKNnRXiSbt5jXmYJ7u9PbgmxLrk_334CAn8DsIxUL2kxIIJBftDg6jliRAc3wqnli4.ClQIvv7BpJEyEhBZdnRvV082R05IaXVDbDd4Ggl1bmRlZmluZWQiDG15cGlrcGFrLmNvbSogMThlODVlMWQ1NjkzNDY0Y2EwYjg4ZGU4NmY2ZDUxYjkSgAEATFcB-13HBJnvwobUo-huC_D2Czl2z602pfINzCswq_20fTtrYEE1SvqGT6sn4X1TZiTWOI8RFE3sZQysJwkAANMvVARotjP66sTvwfr4xU-z8ylW7WMp1VkXnadNgfNhAFEhXWmOxHwvba99neQ5iyUQA9qHLai5ViwbTMRhGg
+x-client-id: YvtoWO6GNHiuCl7x
+x-client-version: 2.5.4.4801
+x-device-id: 5558556d5693464ca0b88de86f6d51b9
+x-system-language: en-US
+
+{"apk_extra":{"invite_code":""}}
+
+###
+POST https://api-drive.mypikpak.com/vip/v1/order/activation-code HTTP/2
+host: api-drive.mypikpak.com
+content-length: 46
+accept: */*
+accept-encoding: gzip, deflate, br
+accept-language: en-US
+authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk2MTVkZGU5LTI5N2YtNDM1ZC05MDQzLTM5NzhiNTdiYmEwNyJ9.eyJpc3MiOiJodHRwczovL3VzZXIubXlwaWtwYWsuY29tIiwic3ViIjoiWnEwNEt6U1FHUlBpVFBTTiIsImF1ZCI6Ill2dG9XTzZHTkhpdUNsN3giLCJleHAiOjE3MjI2MzUzNDAsImlhdCI6MTcyMjYyODE0MCwiYXRfaGFzaCI6InIuUXk5eHIxRUlFZS02QWg1NUdTZU0tdyIsInNjb3BlIjoicGFuIHVzZXIgc3luYyBvZmZsaW5lIiwicHJvamVjdF9pZCI6IjJ3a3M1NmMzMWRjODBzeG01cDkiLCJtZXRhIjp7ImEiOiJmSE1RZE82VjNVOU1LY0MxYVNhQm9qNlF4MDk2aFEzbE41bVhGc2VKMnpZPSJ9fQ.jv156uRDcueHFX12uOg6_zQFq7YU2CDjUnO_iHNcLb8oRcJrB2kBpnlGO_kOt418WngDVHH3G_qLvYA2ciK46MPyCSvj7hSh6IoFbgn-ITvT287KqiBQh_U37PyfnXPNbs4bCzbyAAQBBRS6ZcJXzPC56YWUm5umATeWxLSl0DndoJViUxvT60f9xZT1ETJpNqEiwBM0ubIfXwUTSXfG2SxYIFy7tgGYC2ZiKRMmCVMSCsNygQYZF_Uzp49n60KivyWuuNsec1qxpYCkGjQnredgDBW6wXMlz22Hha2BJW4Fq-Y1YCIfL0gN4Lxu6CUXqiZGydE2tJQLu2k3eTeT_g
+referer: https://pc.mypikpak.com
+sec-fetch-dest: empty
+sec-fetch-mode: cors
+sec-fetch-site: cross-site
+user-agent: MainWindow Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) PikPak/2.5.4.4801 Chrome/100.0.4896.160 Electron/18.3.15 Safari/537.36
+content-type: application/json
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+x-captcha-token: ck0.iehGjd0I5AQSozg-ksypMiq0Nk0N6ZoU6jCJoIBy2Va0cvd-_ZO9KXuKklAoezHx4PJpShyrqdaugPlIhvGIv7rdwG7pDZIVBNsfoqR2brTBRr4kZqU839qONq-hPXtkZEML9s9KfXI5avpqT30d2ZHdLllPmCWPJe9zUwfOwDeg2VCxccjJ5ZPeNIkcC2E7wGBPY54ixSmYo4Hb2H0EFiAasGyABgpxKv-lEjYPTU90Fg0vJjngGS49MiZEo8UMz2JDCioC_ka3Z3B7nrKYUIRIgaUkVm0TOBAMmISQK8_5WCW2V1mnJALdf2HOeRlMUcz-7HkBfm7NkomKBVZJ9H3lKJxM9KT--Lw_HFYpoIoWUHaz6SB2Bri2fm3MpJEv2aYieyk3atXqJDwqSEt6AQ.ClQIi-L8pJEyEhBZdnRvV082R05IaXVDbDd4Ggl1bmRlZmluZWQiDG15cGlrcGFrLmNvbSogMThlODVlMWQ1NjkzNDY0Y2EwYjg4ZGU4NmY2ZDUxYjkSgAGZyS4YrcWQGmfSgJRt2yP9Gym-i71k6JnwZStbVY5wzH0zVAJ50bHZod8yyjenZnUbh4dGmhND4eXxrBbnmRHtnw0kYhjerq8KGzMabxZqzW68WD8lEu-c3y4jgqljwXCs-GE9_kB-Prx5HN_sgx5f6GXuouBoJj22sgRKqVD9gA
+x-client-id: YvtoWO6GNHiuCl7x
+x-client-version: 2.5.4.4801
+x-device-id: 5558556d5693464ca0b88de86f6d51b9
+x-system-language: en-US
+
+{"activation_code":"45040903","page":"invite"}
+
+###
+
+https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdwHgcqAAAAACSTxyrqqnHNY9-NdSvRD-1A1eap&co=aHR0cHM6Ly91c2VyLm15cGlrcGFrLmNvbTo0NDM.&hl=en&v=hfUfsXWZFeg83qqxrK27GB8P&size=normal&sa=dev-common&cb=gmuish58dnlb
+https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdwHgcqAAAAACSTxyrqqnHNY9-NdSvRD-1A1eap&co=aHR0cHM6Ly91c2VyLm15cGlrcGFrLmNvbTo0NDM.&hl=en&v=hfUfsXWZFeg83qqxrK27GB8P&size=normal&sa=dev-common&cb=aqyblxi47qvt
