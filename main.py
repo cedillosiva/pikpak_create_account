@@ -5,9 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from GmailBox import GmailBox
 import json
-import os
-os.environ['DISPLAY'] = ':0'
-
 import pyautogui
 
 def wait_for_element(driver, xpath, waitS = 10):
