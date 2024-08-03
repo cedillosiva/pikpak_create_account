@@ -1,4 +1,4 @@
-name: Windows - PikPak Create Account every 3 days
+name: Windows - PikPak create account every 3 days
 
 on:
   schedule:
