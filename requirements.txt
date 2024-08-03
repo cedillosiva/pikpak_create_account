@@ -1,3 +1,4 @@
 selenium==4.23.1
 GmailBox==1.0.0
 PyAutoGUI==0.9.54
+pytz
