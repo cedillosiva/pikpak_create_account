@@ -7,6 +7,7 @@ from GmailBox import GmailBox
 import json
 import pyautogui
 import os
+import requests
 
 def wait_for_element(driver, xpath, waitS = 1000):
     for i in range(waitS):
@@ -80,4 +81,6 @@ time.sleep(1)
 print(email, code)
 with open('data.json', 'w') as f:
     json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
+host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
+requests.get(f"{host}/update/{email}")
 driver.quit()
