@@ -1,4 +1,4 @@
-name: Windows - PikPak Create Account
+name: Windows - PikPak Create Account every 3 days
 
 on:
   workflow_dispatch:
