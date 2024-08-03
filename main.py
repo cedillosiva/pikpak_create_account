@@ -47,7 +47,7 @@ print("Waiting for capthca to do its job")
 while True:
     if len(driver.find_elements(By.XPATH, "//iframe"))==0:
         break
-
+time.sleep(5)
 # Start checking the inbox
 inbox = Gmail.inbox(email)
 # If there are messages in the inbox, print them
@@ -80,4 +80,4 @@ time.sleep(1)
 print(email, code)
 with open('data.json', 'w') as f:
     json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
-driver.quit()
+time.sleep(100000)
