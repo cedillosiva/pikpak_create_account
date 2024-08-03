@@ -20,7 +20,7 @@ New_Gmail = Gmail.new_email()
 email = New_Gmail.email
 print(email)
 password = 'Test@1234'
-magnet = 'magnet:?xt=urn:btih:3928fc19fef800d3b164eabbfe3ef9aac4432c5b'
+magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
 
 options = ChromeOptions()
 print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
