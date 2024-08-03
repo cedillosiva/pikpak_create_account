@@ -17,17 +17,18 @@ def wait_for_element(driver, xpath, waitS = 10):
 Gmail = GmailBox()
 New_Gmail = Gmail.new_email()
 email = New_Gmail.email
-
+print(email)
 password = 'Test@1234'
 magnet = 'magnet:?xt=urn:btih:3928fc19fef800d3b164eabbfe3ef9aac4432c5b'
 
 options = ChromeOptions()
+print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
 options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
 driver = webdriver.Chrome(options=options)
+driver.minimize_window()
 driver.maximize_window()
-
+print("Focus to window")
 driver.get("https://mypikpak.com/drive/login")
-
 try:
     driver.find_element(By.XPATH, "//span[@class='other-login-methods']").click()
 except:
@@ -37,14 +38,12 @@ driver.find_element(By.XPATH, "//div[@class='icon-email']").click()
 driver.find_element(By.XPATH, "//span[@class='login-header-subtitle link']").click()
 driver.find_element(By.XPATH, "(//input)[1]").send_keys(email)
 driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
-
-driver.minimize_window()
-driver.maximize_window()
+print("pyautogui sending keys for extension")
 time.sleep(1)
 pyautogui.hotkey('ctrl','shift','Y')
 time.sleep(1)
 pyautogui.hotkey('esc')
-
+print("Waiting for capthca to do its job")
 while True:
     if len(driver.find_elements(By.XPATH, "//iframe"))==0:
         break
