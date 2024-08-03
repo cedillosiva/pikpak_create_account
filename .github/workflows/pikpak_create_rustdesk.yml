@@ -32,7 +32,7 @@ jobs:
         run: python main.py
         
       - name: Time Counter
-        run: python time.py
+        run: python time_wait.py
         
       - name: commit files
         run: |
