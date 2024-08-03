@@ -47,7 +47,7 @@ print("Waiting for capthca to do its job")
 while True:
     if len(driver.find_elements(By.XPATH, "//iframe"))==0:
         break
-time.sleep(5)
+time.sleep(10)
 # Start checking the inbox
 inbox = Gmail.inbox(email)
 # If there are messages in the inbox, print them
