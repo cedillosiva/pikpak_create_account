@@ -8,7 +8,7 @@ import json
 import pyautogui
 import os
 
-def wait_for_element(driver, xpath, waitS = 10):
+def wait_for_element(driver, xpath, waitS = 60):
     for i in range(waitS):
         if len(driver.find_elements(By.XPATH, xpath)) > 0:
             break
@@ -71,7 +71,7 @@ time.sleep(1)
 wait_for_element(driver, "//a[contains(text(),'I Know')]")
 driver.find_element(By.XPATH, "//a[contains(text(),'I Know')]").click()
 
-wait_for_element(driver,"(//button[@class='el-button el-button--primary button'])[1]")
+wait_for_element(driver,"(//button[@class='el-button el-button--primary button'])[1]", 300)
 driver.find_element(By.XPATH, "(//button[@class='el-button el-button--primary button'])[1]").click()
 driver.find_element(By.XPATH, "//textarea").send_keys(magnet)
 els = driver.find_elements(By.XPATH, "//button[@class='el-button el-button--primary']")
