@@ -1,4 +1,4 @@
-name: Windows - PikPak Create Account
+name: Windows - PikPak Create Account RustDesk
 
 on:
   workflow_dispatch:
