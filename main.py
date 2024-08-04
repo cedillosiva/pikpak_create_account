@@ -36,7 +36,7 @@ time.sleep(1)
 pyautogui.hotkey('ctrl','shift','Y')
 time.sleep(1)
 pyautogui.hotkey('esc')
-driver.set_window_size(1920,1080)
+
 try:
     driver.find_element(By.XPATH, "//span[@class='other-login-methods']").click()
 except:
@@ -89,6 +89,7 @@ with open('data.json', 'w') as f:
 host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
 requests.get(f"{host}/update/{email}")
 time.sleep(5)
+print("Print got 1 day premium")
 wait_for_element(driver, "//*[@class=\"el-dialog__body\"]/div[@class='button']")
 driver.find_element(By.XPATH, "//*[@class=\"el-dialog__body\"]/div[@class='button']").click()
 wait_for_element(driver, "//*[contains(text(), 'Do not display this pop-up')]", 5)
@@ -96,9 +97,11 @@ try:
     driver.find_element(By.XPATH, "//*[contains(text(), 'Do not display this pop-up')]").click()
 except:
     pass
+print("Trying addon 1")
 wait_for_element(driver, "(//button[@class='el-button el-button--primary button'])[1]")
 driver.find_element(By.XPATH, "(//button[@class='el-button el-button--primary button'])[1]").click()
 time.sleep(5)
+print("Trying addon 2")
 driver.switch_to.window(driver.window_handles[-1])
 wait_for_element(driver, "//a[@class='chrome']")
 time.sleep(2)
