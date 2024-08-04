@@ -25,16 +25,15 @@ magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
 options = ChromeOptions()
 print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
 options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
-options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(options=options)
 driver.minimize_window()
 driver.maximize_window()
 print("Focus to window")
 driver.get("https://mypikpak.com/drive/login")
 print("pyautogui sending keys for extension")
-time.sleep(1)
+time.sleep(5)
 pyautogui.hotkey('ctrl','shift','Y')
-time.sleep(1)
+time.sleep(5)
 pyautogui.hotkey('esc')
 
 try:
