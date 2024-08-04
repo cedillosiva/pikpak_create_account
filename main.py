@@ -25,7 +25,7 @@ magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
 options = ChromeOptions()
 print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
 options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
-options.addArguments("window-size=1920,1080")
+options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(options=options)
 #driver.minimize_window()
 #driver.maximize_window()
