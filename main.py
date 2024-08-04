@@ -54,6 +54,7 @@ def wait_for_captcha(driver):
             break
     print("Frame wait complete")
 
+url = "https://mypikpak.com/drive/login"
 password = 'Test@1234'
 magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
 
@@ -77,8 +78,10 @@ while True:
         break
     # If no messages were received, print a message
     else:
+        print("No Message received with code from PikPak : Retrying!!!")
         try:
-            driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
+            driver.get(url)
+            sigup(driver)
             wait_for_captcha(driver)
         except:
             time.sleep(10)
