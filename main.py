@@ -82,6 +82,7 @@ while True:
         try:
             driver.get(url)
             sigup(driver)
+            time.sleep(5)
             wait_for_captcha(driver)
         except:
             time.sleep(10)
