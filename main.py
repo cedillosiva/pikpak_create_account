@@ -27,10 +27,16 @@ print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
 options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
 options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(options=options)
-#driver.minimize_window()
-#driver.maximize_window()
-#print("Focus to window")
+driver.minimize_window()
+driver.maximize_window()
+print("Focus to window")
 driver.get("https://mypikpak.com/drive/login")
+print("pyautogui sending keys for extension")
+time.sleep(1)
+pyautogui.hotkey('ctrl','shift','Y')
+time.sleep(1)
+pyautogui.hotkey('esc')
+driver.set_window_size(1920,1080)
 try:
     driver.find_element(By.XPATH, "//span[@class='other-login-methods']").click()
 except:
@@ -40,16 +46,12 @@ driver.find_element(By.XPATH, "//div[@class='icon-email']").click()
 driver.find_element(By.XPATH, "//span[@class='login-header-subtitle link']").click()
 driver.find_element(By.XPATH, "(//input)[1]").send_keys(email)
 driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
-print("pyautogui sending keys for extension")
-time.sleep(1)
-pyautogui.hotkey('ctrl','shift','Y')
-time.sleep(1)
-pyautogui.hotkey('esc')
 print("Waiting for capthca to do its job")
+time.sleep(5)
 while True:
     if len(driver.find_elements(By.XPATH, "//iframe"))==0:
         break
-time.sleep(5)
+
 # Start checking the inbox
 inbox = Gmail.inbox(email)
 # If there are messages in the inbox, print them
