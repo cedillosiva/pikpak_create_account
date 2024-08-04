@@ -15,44 +15,59 @@ def wait_for_element(driver, xpath, waitS = 1000):
             break
         time.sleep(1)
 
-Gmail = GmailBox()
-New_Gmail = Gmail.new_email()
-email = New_Gmail.email
-print(email)
+def get_email():
+    New_Gmail = Gmail.new_email()
+    email = New_Gmail.email
+    print(email)
+    return email
+
+def initialize_driver(url = "https://mypikpak.com/drive/login"):
+    options = ChromeOptions()
+    print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
+    options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
+    driver = webdriver.Chrome(options=options)
+    driver.minimize_window()
+    driver.maximize_window()
+    print("Focus to window")
+    driver.get(url)
+    driver.find_element(By.XPATH, "//button[@class='el-button el-button--primary']").click()
+    print("pyautogui sending keys for extension")
+    time.sleep(2)
+    pyautogui.hotkey('ctrl','shift','Y')
+    time.sleep(1)
+    pyautogui.hotkey('esc')
+    return driver
+
+def sigup(driver):
+    try:
+        driver.find_element(By.XPATH, "//span[@class='other-login-methods']").click()
+    except:
+        pass
+
+    driver.find_element(By.XPATH, "//div[@class='icon-email']").click()
+    driver.find_element(By.XPATH, "//span[@class='login-header-subtitle link']").click()
+    driver.find_element(By.XPATH, "(//input)[1]").send_keys(email)
+    driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
+def wait_for_captcha(driver):
+    while True:
+        if len(driver.find_elements(By.XPATH, "//iframe"))==0:
+            break
+    print("Frame wait complete")
+
 password = 'Test@1234'
 magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
 
-options = ChromeOptions()
-print("Extension dir :", f"{os.getcwd()}\\captcha_solver")
-options.add_argument(f"--load-extension={os.getcwd()}\\captcha_solver")
-driver = webdriver.Chrome(options=options)
-driver.minimize_window()
-driver.maximize_window()
-print("Focus to window")
-driver.get("https://mypikpak.com/drive/login")
-print("pyautogui sending keys for extension")
-time.sleep(5)
-pyautogui.hotkey('ctrl','shift','Y')
-time.sleep(5)
-pyautogui.hotkey('esc')
-
-try:
-    driver.find_element(By.XPATH, "//span[@class='other-login-methods']").click()
-except:
-    pass
-
-driver.find_element(By.XPATH, "//div[@class='icon-email']").click()
-driver.find_element(By.XPATH, "//span[@class='login-header-subtitle link']").click()
-driver.find_element(By.XPATH, "(//input)[1]").send_keys(email)
-driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
+Gmail = GmailBox()
+email = get_email()
+driver = initialize_driver()
+sigup(driver)
 print("Waiting for capthca to do its job")
 time.sleep(5)
-while True:
-    if len(driver.find_elements(By.XPATH, "//iframe"))==0:
-        break
+wait_for_captcha(driver)
 
 # Start checking the inbox
 inbox = Gmail.inbox(email)
+
 while True:
     # If there are messages in the inbox, print them
     if inbox:
@@ -62,7 +77,13 @@ while True:
         break
     # If no messages were received, print a message
     else:
-        continue
+        try:
+            driver.find_element(By.XPATH, "//div[@class='count-down-button']").click()
+            wait_for_captcha(driver)
+        except:
+            time.sleep(10)
+
+print("Gmail wait complete")
 
 driver.switch_to.default_content()
 driver.find_element(By.XPATH, "(//input)[2]").send_keys(code)
@@ -108,7 +129,7 @@ driver.find_element(By.XPATH,"//a[@class='chrome']").click()
 time.sleep(5)
 driver.switch_to.window(driver.window_handles[2])
 driver.find_element(By.XPATH,"//span[contains(text(),'Add to Chrome')]").click()
-time.sleep(1)
+time.sleep(5)
 pyautogui.hotkey('tab')
 pyautogui.hotkey('enter')
 time.sleep(20)
