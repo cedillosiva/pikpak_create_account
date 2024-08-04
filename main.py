@@ -104,8 +104,10 @@ driver.find_element(By.XPATH, "//textarea").send_keys(magnet)
 els = driver.find_elements(By.XPATH, "//button[@class='el-button el-button--primary']")
 els[-1].click()
 print(email, code)
-with open('data.json', 'w') as f:
-    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
+
+#with open('data.json', 'w') as f:
+#    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
+
 host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
 requests.get(f"{host}/update/{email}")
 time.sleep(5)
