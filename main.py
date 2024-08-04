@@ -82,7 +82,7 @@ while True:
             wait_for_captcha(driver)
         except:
             time.sleep(10)
-
+    time.sleep(10)
 print("Gmail wait complete")
 
 driver.switch_to.default_content()
