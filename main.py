@@ -54,13 +54,16 @@ while True:
 
 # Start checking the inbox
 inbox = Gmail.inbox(email)
-# If there are messages in the inbox, print them
-if inbox:
-    for message in inbox:
-        code = str(message).split("verification Code：")[2][:6]
-# If no messages were received, print a message
-else:
-    print(f' [!] No messages were received.')
+while True:
+    # If there are messages in the inbox, print them
+    if inbox:
+        for message in inbox:
+            code = str(message).split("verification Code：")[2][:6]
+            
+        break
+    # If no messages were received, print a message
+    else:
+        continue
 
 driver.switch_to.default_content()
 driver.find_element(By.XPATH, "(//input)[2]").send_keys(code)
