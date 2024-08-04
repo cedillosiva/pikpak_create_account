@@ -64,7 +64,7 @@ sigup(driver)
 print("Waiting for capthca to do its job")
 time.sleep(5)
 wait_for_captcha(driver)
-
+time.sleep(5)
 # Start checking the inbox
 inbox = Gmail.inbox(email)
 
