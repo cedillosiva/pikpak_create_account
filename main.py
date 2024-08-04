@@ -85,6 +85,11 @@ requests.get(f"{host}/update/{email}")
 time.sleep(5)
 wait_for_element(driver, "//*[@class=\"el-dialog__body\"]/div[@class='button']")
 driver.find_element(By.XPATH, "//*[@class=\"el-dialog__body\"]/div[@class='button']").click()
+wait_for_element(driver, "//*[contains(text(), 'Do not display this pop-up')]", 5)
+try:
+    driver.find_element(By.XPATH, "//*[contains(text(), 'Do not display this pop-up')]").click()
+except:
+    pass
 wait_for_element(driver, "(//button[@class='el-button el-button--primary button'])[1]")
 driver.find_element(By.XPATH, "(//button[@class='el-button el-button--primary button'])[1]").click()
 time.sleep(5)
