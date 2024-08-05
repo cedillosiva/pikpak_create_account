@@ -111,7 +111,7 @@ print(email, code)
 
 #with open('data.json', 'w') as f:
 #    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
-
+#host = "http://127.0.0.1:5000"
 host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
 requests.get(f"{host}/update/{email}")
 time.sleep(5)
@@ -138,5 +138,6 @@ driver.find_element(By.XPATH,"//span[contains(text(),'Add to Chrome')]").click()
 time.sleep(5)
 pyautogui.hotkey('tab')
 pyautogui.hotkey('enter')
+print("Completed creating task : emal : ", email)
 time.sleep(20)
 driver.quit()
