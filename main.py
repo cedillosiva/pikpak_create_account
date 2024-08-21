@@ -109,8 +109,8 @@ els = driver.find_elements(By.XPATH, "//button[@class='el-button el-button--prim
 els[-1].click()
 print(email, code)
 
-#with open('data.json', 'w') as f:
-#    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
+with open('data.json', 'w') as f:
+    json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
 #host = "http://127.0.0.1:5000"
 host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
 requests.get(f"{host}/update/{email}")
