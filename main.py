@@ -112,8 +112,8 @@ print(email, code)
 with open('data.json', 'w') as f:
     json.dump({'email' : email, 'password' : password, 'code' : 'code'}, f)
 #host = "http://127.0.0.1:5000"
-host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
-requests.get(f"{host}/update/{email}")
+#host = "https://adverse-patrizia-piyushstremio-b2b90014.koyeb.app"
+#requests.get(f"{host}/update/{email}")
 time.sleep(5)
 print("Print got 1 day premium")
 wait_for_element(driver, "//*[@class=\"el-dialog__body\"]/div[@class='button']")
