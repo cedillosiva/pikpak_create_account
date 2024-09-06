@@ -4,6 +4,7 @@ from selenium.webdriver import ChromeOptions
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
+import json
 import time
 from tempmail import EMail
 import pyautogui
@@ -12,6 +13,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.pool import NullPool
 
+email = ''
 def wait_for_element(driver, xpath, waitS = 60):
     for i in range(waitS):
         if len(driver.find_elements(By.XPATH, xpath)) > 0:
@@ -56,6 +58,7 @@ def wait_for_captcha(driver):
             break
 
 def create_account(driver):
+    global email
     url = "https://mypikpak.com/drive/login"
     password = 'Test@1234'
     magnet = 'magnet:?xt=urn:btih:11AE1401C79975F7A9195018EB67CD754344CD27'
@@ -101,3 +104,5 @@ for i in range(20):
         create_account(driver)
     except:
         continue
+with open('data.json', 'w') as f:
+    json.dump({'email' : email}, f)
