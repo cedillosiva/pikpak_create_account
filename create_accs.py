@@ -99,7 +99,7 @@ def write_email(email):
 postgres_engine = create_engine("postgresql://avnadmin:AVNS_YsXFiJNy-_YpeUoyZQM@stremio-stremio.l.aivencloud.com:22806/defaultdb?sslmode=require", poolclass=NullPool)
 
 driver = initialize_driver()
-for i in range(20):
+for i in range(10):
     try:
         create_account(driver)
     except:
