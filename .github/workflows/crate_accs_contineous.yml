@@ -1,0 +1,34 @@
+name: Windows - PikPak create account every 3 days
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+        
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner
+
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9' # install the python version needed
+          
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: execute py script # run main.py
+        run: python -u create_accs.py
+      
+      - name: Commit Data from email create
+        run: |
+          git config --global user.name 'Piyush Pradhan'
+          git config --global user.email 'piyushpradhan22@users.noreply.github.com'
+          git commit -am "Automated pikpak email Update"
+          git push
