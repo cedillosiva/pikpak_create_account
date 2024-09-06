@@ -92,13 +92,12 @@ def write_email(email):
     df = pd.DataFrame([{"email" : email}])
     df.to_sql(name='email', con=postgres_engine, if_exists='append', index=False)
 
+
 postgres_engine = create_engine("postgresql://avnadmin:AVNS_YsXFiJNy-_YpeUoyZQM@stremio-stremio.l.aivencloud.com:22806/defaultdb?sslmode=require", poolclass=NullPool)
 
-while True:
-    driver = initialize_driver()
-    for i in range(8):
-        try:
-            create_account(driver)
-        except:
-            continue
-    driver.quit()
+driver = initialize_driver()
+for i in range(20):
+    try:
+        create_account(driver)
+    except:
+        continue
