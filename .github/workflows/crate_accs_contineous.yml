@@ -1,7 +1,7 @@
 name: Windows - PikPak create account contineous
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
