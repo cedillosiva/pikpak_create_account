@@ -4,3 +4,4 @@ pytz
 tempmail-python
 SQLAlchemy
 psycopg2-binary
+pandas
