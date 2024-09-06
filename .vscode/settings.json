@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": false
+                }
+            },
+            "previewLimit": 50,
+            "server": "stremio-stremio.l.aivencloud.com",
+            "port": 22806,
+            "driver": "PostgreSQL",
+            "name": "AIVEN",
+            "database": "defaultdb",
+            "username": "avnadmin",
+            "password": "AVNS_YsXFiJNy-_YpeUoyZQM"
+        }
+    ]
+}
