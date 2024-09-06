@@ -26,3 +26,10 @@ jobs:
           
       - name: execute py script # run main.py
         run: python -u create_accs.py
+
+      - name: Commit Data from email create
+        run: |
+          git config --global user.name 'PIKPAK'
+          git config --global user.email 'None@users.noreply.github.com'
+          git commit -am "Automated pikpak email Update"
+          git push
