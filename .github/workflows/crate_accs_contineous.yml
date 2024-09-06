@@ -1,5 +1,6 @@
 name: PikPak create account contineous
 on:
+  push:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
