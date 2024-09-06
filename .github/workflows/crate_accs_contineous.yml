@@ -1,4 +1,4 @@
-name: Windows - PikPak create account contineous
+name: PikPak create account contineous
 on:
   schedule:
     - cron: "*/5 * * * *"
